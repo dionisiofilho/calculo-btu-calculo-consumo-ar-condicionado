@@ -1,0 +1,11 @@
+{
+  "consumption_calculation": "Cálculo consumo",
+  "hours_per_day": "Horas por dia",
+  "days_per_month": "Dias por mês",
+  "device_power_consumption": "Consumo de energia do aparelho (kW/h por mês)",
+  "energy_price": "Preço da energia por kW/h",
+  "calculate" : "Calcular",
+  "btu_calculate" : "Calcular BTU",
+  "energy_calculate" : "Calcular consumo",
+  "input_required" :  "Campo obrigatório"
+}
