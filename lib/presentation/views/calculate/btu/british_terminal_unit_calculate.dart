@@ -45,7 +45,7 @@ class _BritishTerminalUnitCalculateState
             padding: StyleApp.paddingPage,
             child: Column(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 CenterHorizontal(
                     child: Text(LocaleProvider.current.btu_calculate,
@@ -72,6 +72,7 @@ class _BritishTerminalUnitCalculateState
                       _bristishTerminalUnitStore.setWidth(int.parse(value!))
                     },
                     keyboardType: TextInputType.number,
+                    textInputAction: TextInputAction.next,
                     maxLength: 5,
                     decoration: const InputDecoration(counterText: ""),
                   ),
@@ -90,6 +91,7 @@ class _BritishTerminalUnitCalculateState
                       _bristishTerminalUnitStore.setHeight(int.parse(value!))
                     },
                     keyboardType: TextInputType.number,
+                    textInputAction: TextInputAction.next,
                     maxLength: 5,
                     decoration: const InputDecoration(counterText: ""),
                   ),
@@ -122,6 +124,7 @@ class _BritishTerminalUnitCalculateState
                           .setAmountOfPeople(int.parse(value!))
                     },
                     keyboardType: TextInputType.number,
+                    textInputAction: TextInputAction.next,
                     maxLength: 4,
                     decoration: const InputDecoration(counterText: ""),
                   ),
@@ -137,6 +140,10 @@ class _BritishTerminalUnitCalculateState
                       _bristishTerminalUnitStore.setEquipment(int.parse(value!))
                     },
                     keyboardType: TextInputType.number,
+                    textInputAction: TextInputAction.send,
+                    onFieldSubmitted: (value){
+                      _calculate();
+                    },
                     maxLength: 5,
                     decoration: const InputDecoration(counterText: ""),
                   ),

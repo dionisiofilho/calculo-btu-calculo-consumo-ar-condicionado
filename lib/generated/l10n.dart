@@ -50,10 +50,10 @@ class LocaleProvider {
     return Localizations.of<LocaleProvider>(context, LocaleProvider);
   }
 
-  /// `Cálculo consumo`
+  /// `Calcular consumo`
   String get consumption_calculation {
     return Intl.message(
-      'Cálculo consumo',
+      'Calcular consumo',
       name: 'consumption_calculation',
       desc: '',
       args: [],

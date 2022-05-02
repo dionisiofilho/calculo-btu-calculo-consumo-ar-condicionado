@@ -1,5 +1,5 @@
 {
-  "consumption_calculation": "Cálculo consumo",
+  "consumption_calculation": "Calcular consumo",
   "hours_per_day": "Horas por dia",
   "days_per_month": "Dias por mês",
   "device_power_consumption": "Consumo de energia do aparelho (kW/h por mês)",

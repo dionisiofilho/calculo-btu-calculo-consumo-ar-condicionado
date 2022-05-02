@@ -43,7 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "can_buy_lower_power_description": MessageLookupByLibrary.simpleMessage(
             "A utilização de um aparelho de Ar condicionado de potência menor que o recomendado para o ambiente de instalação resultará em pouca eficiência de climatização, diminuição da vida útil e uma maior conta de luz."),
         "consumption_calculation":
-            MessageLookupByLibrary.simpleMessage("Cálculo consumo"),
+            MessageLookupByLibrary.simpleMessage("Calcular consumo"),
         "days_per_month": MessageLookupByLibrary.simpleMessage("Dias por mês"),
         "device_power_consumption": MessageLookupByLibrary.simpleMessage(
             "Consumo de energia do aparelho (kW/h por mês)"),
