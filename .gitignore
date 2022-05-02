@@ -224,6 +224,9 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# Generated Dart files
+**/*.g.dart
+
 ### AndroidStudio Patch ###
 
 !/gradle/wrapper/gradle-wrapper.jar
