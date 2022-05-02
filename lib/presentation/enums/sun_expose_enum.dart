@@ -1,31 +1,31 @@
 import 'package:calculo_ar_condicionado/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-enum SunExpose { Directly, Partially, Absence }
+enum SunExposure { Directly, Partially, Absence }
 
-extension SunExposeExtension on SunExpose {
+extension SunExposureExtension on SunExposure {
   String getDescription() {
     switch (this) {
-      case SunExpose.Directly:
+      case SunExposure.Directly:
         return LocaleProvider.current.directly;
 
-      case SunExpose.Absence:
+      case SunExposure.Absence:
         return LocaleProvider.current.absence_light;
 
-      case SunExpose.Partially:
+      case SunExposure.Partially:
         return LocaleProvider.current.partially;
     }
   }
 
   IconData? getIcon() {
     switch (this) {
-      case SunExpose.Directly:
+      case SunExposure.Directly:
         return const IconData(0xe800, fontFamily: "MyFlutterApp", fontPackage: null);
 
-      case SunExpose.Absence:
+      case SunExposure.Absence:
         return const IconData(0xe801, fontFamily: "MyFlutterApp", fontPackage: null);
 
-      case SunExpose.Partially:
+      case SunExposure.Partially:
         return const IconData(0xe802, fontFamily: "MyFlutterApp", fontPackage: null);
     }
   }

@@ -360,10 +360,10 @@ class LocaleProvider {
     );
   }
 
-  /// `Defina a quantidade de pessoas, janelas e equipamentos`
+  /// `Defina a quantidade de pessoas, janelas e equipamentos eletrônicos`
   String get quantity_others {
     return Intl.message(
-      'Defina a quantidade de pessoas, janelas e equipamentos',
+      'Defina a quantidade de pessoas, janelas e equipamentos eletrônicos',
       name: 'quantity_others',
       desc: '',
       args: [],
@@ -400,11 +400,91 @@ class LocaleProvider {
     );
   }
 
+  /// `Ex. R$ 0,93`
+  String get example_energy_value {
+    return Intl.message(
+      'Ex. R\$ 0,93',
+      name: 'example_energy_value',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Selo Procel`
   String get procel_seal {
     return Intl.message(
       'Selo Procel',
       name: 'procel_seal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantidade de pessoas`
+  String get amount_of_people {
+    return Intl.message(
+      'Quantidade de pessoas',
+      name: 'amount_of_people',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantidade de equipamentos eletrônico`
+  String get amount_of_eletronic {
+    return Intl.message(
+      'Quantidade de equipamentos eletrônico',
+      name: 'amount_of_eletronic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Largura inválida`
+  String get invalid_width {
+    return Intl.message(
+      'Largura inválida',
+      name: 'invalid_width',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A largura tem que ser maior que 0 (Zero).`
+  String get invalid_width_greater_zero {
+    return Intl.message(
+      'A largura tem que ser maior que 0 (Zero).',
+      name: 'invalid_width_greater_zero',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comprimento inválido`
+  String get invalid_length {
+    return Intl.message(
+      'Comprimento inválido',
+      name: 'invalid_length',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `O comprimento tem que ser maior que 0 (Zero).`
+  String get invalid_length_greater_zero {
+    return Intl.message(
+      'O comprimento tem que ser maior que 0 (Zero).',
+      name: 'invalid_length_greater_zero',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Informe a exposição solar do ambiente`
+  String get invalid_sun_exposure {
+    return Intl.message(
+      'Informe a exposição solar do ambiente',
+      name: 'invalid_sun_exposure',
       desc: '',
       args: [],
     );

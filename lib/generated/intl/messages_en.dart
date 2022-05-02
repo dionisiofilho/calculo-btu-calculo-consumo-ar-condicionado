@@ -26,6 +26,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ausência de luz"),
         "ambient_footage":
             MessageLookupByLibrary.simpleMessage("Metragem do ambiente"),
+        "amount_of_eletronic": MessageLookupByLibrary.simpleMessage(
+            "Quantidade de equipamentos eletrônico"),
+        "amount_of_people":
+            MessageLookupByLibrary.simpleMessage("Quantidade de pessoas"),
         "british_thermal_unit":
             MessageLookupByLibrary.simpleMessage("British Thermal Unit"),
         "btu_calculate": MessageLookupByLibrary.simpleMessage("Calcular BTU"),
@@ -45,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ex. 20"),
         "example_device_value_consumption":
             MessageLookupByLibrary.simpleMessage("Ex. 22.8"),
+        "example_energy_value":
+            MessageLookupByLibrary.simpleMessage("Ex. R\$ 0,93"),
         "example_hours_per_days": MessageLookupByLibrary.simpleMessage("Ex. 8"),
         "hours": MessageLookupByLibrary.simpleMessage("Horas"),
         "hours_per_day": MessageLookupByLibrary.simpleMessage("Horas por dia"),
@@ -68,6 +74,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Dias por mês inválido"),
         "invalid_energy_value": MessageLookupByLibrary.simpleMessage(
             "O preço da energia não pode ser R\$ 0,00"),
+        "invalid_length":
+            MessageLookupByLibrary.simpleMessage("Comprimento inválido"),
+        "invalid_length_greater_zero": MessageLookupByLibrary.simpleMessage(
+            "O comprimento tem que ser maior que 0 (Zero)."),
+        "invalid_sun_exposure": MessageLookupByLibrary.simpleMessage(
+            "Informe a exposição solar do ambiente"),
+        "invalid_width":
+            MessageLookupByLibrary.simpleMessage("Largura inválida"),
+        "invalid_width_greater_zero": MessageLookupByLibrary.simpleMessage(
+            "A largura tem que ser maior que 0 (Zero)."),
         "length": MessageLookupByLibrary.simpleMessage("Comprimento"),
         "message_result_consumption": MessageLookupByLibrary.simpleMessage(
             "A média de consumo do seu aparelho é de:"),
@@ -76,7 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "partially": MessageLookupByLibrary.simpleMessage("Parcialmente"),
         "procel_seal": MessageLookupByLibrary.simpleMessage("Selo Procel"),
         "quantity_others": MessageLookupByLibrary.simpleMessage(
-            "Defina a quantidade de pessoas, janelas e equipamentos"),
+            "Defina a quantidade de pessoas, janelas e equipamentos eletrônicos"),
         "sun_exposure_level": MessageLookupByLibrary.simpleMessage(
             "Qual o nível de exposição solar do ambiente"),
         "width": MessageLookupByLibrary.simpleMessage("Largura")

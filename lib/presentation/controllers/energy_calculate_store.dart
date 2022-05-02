@@ -37,13 +37,9 @@ abstract class _EnergyCalculateStore with Store {
     }
   }
 
-  @action
   Future<EnergyCalculate> calculate() async {
-    var energyCalculate = EnergyCalculate();
-    energyCalculate.hoursPerDay = hoursPerDay;
-    energyCalculate.devicePowerConsumption = devicePowerConsumption;
-    energyCalculate.daysPerMonth = daysPerMonth;
-    energyCalculate.energyValue = energyValue;
+    var energyCalculate = EnergyCalculate.init(
+        hoursPerDay, daysPerMonth, devicePowerConsumption, energyValue);
 
     String? error = energyCalculate.validate();
 

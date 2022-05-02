@@ -15,13 +15,14 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       supportedLocales: LocaleProvider.delegate.supportedLocales,
       localizationsDelegates: const [
         LocaleProvider.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
+        GlobalWidgetsLocalizations.delegate,
       ],
       restorationScopeId: 'app',
       debugShowCheckedModeBanner: false,

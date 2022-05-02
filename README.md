@@ -1,6 +1,6 @@
 # calculo_ar_condicionado
 
-Calcular BTU e consumo de ar-condicionado
+Calcular BTU e consumo de ar condicionado
 
 ## Getting Started
 

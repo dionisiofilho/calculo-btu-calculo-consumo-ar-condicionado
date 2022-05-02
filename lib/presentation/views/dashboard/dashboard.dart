@@ -1,5 +1,5 @@
 import 'package:calculo_ar_condicionado/generated/l10n.dart';
-import 'package:calculo_ar_condicionado/presentation/views/calculate/btu/british_terminal_unit.dart';
+import 'package:calculo_ar_condicionado/presentation/views/calculate/btu/british_terminal_unit_calculate.dart';
 import 'package:calculo_ar_condicionado/presentation/views/calculate/energy/energy_calculate.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   final List<Widget> _screens = [
-    const BritishTerminalUnit(),
+    const BritishTerminalUnitCalculate(),
     const EnergyCalculateView()
   ];
 
