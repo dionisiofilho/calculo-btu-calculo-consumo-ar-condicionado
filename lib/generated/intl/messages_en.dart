@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "absence_light":
-            MessageLookupByLibrary.simpleMessage("ausência de luz"),
+            MessageLookupByLibrary.simpleMessage("Ausência de luz"),
         "ambient_footage":
             MessageLookupByLibrary.simpleMessage("Metragem do ambiente"),
         "amount_of_eletronic": MessageLookupByLibrary.simpleMessage(
@@ -34,6 +34,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("British Thermal Unit"),
         "btu_calculate": MessageLookupByLibrary.simpleMessage("Calcular BTU"),
         "calculate": MessageLookupByLibrary.simpleMessage("Calcular"),
+        "can_buy_higher_power": MessageLookupByLibrary.simpleMessage(
+            "Posso comprar um de potência maior?\n"),
+        "can_buy_higher_power_description": MessageLookupByLibrary.simpleMessage(
+            "A utilização de um aparelho de Ar Condicionado de potência maior que o recomendado para o ambiente de instalação pode não ser prejudicial. Por exemplo: Se você adquirir um aparelho com capacidade maior porém com tecnologia INVERTER, estará adquirindo um produto com uma tecnologia capaz de interpretar e operar eletronicamente com a potência necessária para o ambiente."),
+        "can_buy_lower_power": MessageLookupByLibrary.simpleMessage(
+            "Posso comprar um de potência menor?\n"),
+        "can_buy_lower_power_description": MessageLookupByLibrary.simpleMessage(
+            "A utilização de um aparelho de Ar condicionado de potência menor que o recomendado para o ambiente de instalação resultará em pouca eficiência de climatização, diminuição da vida útil e uma maior conta de luz."),
         "consumption_calculation":
             MessageLookupByLibrary.simpleMessage("Cálculo consumo"),
         "days_per_month": MessageLookupByLibrary.simpleMessage("Dias por mês"),
@@ -87,6 +95,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "length": MessageLookupByLibrary.simpleMessage("Comprimento"),
         "message_result_consumption": MessageLookupByLibrary.simpleMessage(
             "A média de consumo do seu aparelho é de:"),
+        "message_result_device": MessageLookupByLibrary.simpleMessage(
+            "A potência aproximada para você é:"),
         "meters": MessageLookupByLibrary.simpleMessage("Metros"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "partially": MessageLookupByLibrary.simpleMessage("Parcialmente"),

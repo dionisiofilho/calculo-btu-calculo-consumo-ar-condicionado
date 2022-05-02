@@ -350,10 +350,10 @@ class LocaleProvider {
     );
   }
 
-  /// `ausência de luz`
+  /// `Ausência de luz`
   String get absence_light {
     return Intl.message(
-      'ausência de luz',
+      'Ausência de luz',
       name: 'absence_light',
       desc: '',
       args: [],
@@ -485,6 +485,56 @@ class LocaleProvider {
     return Intl.message(
       'Informe a exposição solar do ambiente',
       name: 'invalid_sun_exposure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A potência aproximada para você é:`
+  String get message_result_device {
+    return Intl.message(
+      'A potência aproximada para você é:',
+      name: 'message_result_device',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Posso comprar um de potência menor?\n`
+  String get can_buy_lower_power {
+    return Intl.message(
+      'Posso comprar um de potência menor?\n',
+      name: 'can_buy_lower_power',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A utilização de um aparelho de Ar condicionado de potência menor que o recomendado para o ambiente de instalação resultará em pouca eficiência de climatização, diminuição da vida útil e uma maior conta de luz.`
+  String get can_buy_lower_power_description {
+    return Intl.message(
+      'A utilização de um aparelho de Ar condicionado de potência menor que o recomendado para o ambiente de instalação resultará em pouca eficiência de climatização, diminuição da vida útil e uma maior conta de luz.',
+      name: 'can_buy_lower_power_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Posso comprar um de potência maior?\n`
+  String get can_buy_higher_power {
+    return Intl.message(
+      'Posso comprar um de potência maior?\n',
+      name: 'can_buy_higher_power',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A utilização de um aparelho de Ar Condicionado de potência maior que o recomendado para o ambiente de instalação pode não ser prejudicial. Por exemplo: Se você adquirir um aparelho com capacidade maior porém com tecnologia INVERTER, estará adquirindo um produto com uma tecnologia capaz de interpretar e operar eletronicamente com a potência necessária para o ambiente.`
+  String get can_buy_higher_power_description {
+    return Intl.message(
+      'A utilização de um aparelho de Ar Condicionado de potência maior que o recomendado para o ambiente de instalação pode não ser prejudicial. Por exemplo: Se você adquirir um aparelho com capacidade maior porém com tecnologia INVERTER, estará adquirindo um produto com uma tecnologia capaz de interpretar e operar eletronicamente com a potência necessária para o ambiente.',
+      name: 'can_buy_higher_power_description',
       desc: '',
       args: [],
     );

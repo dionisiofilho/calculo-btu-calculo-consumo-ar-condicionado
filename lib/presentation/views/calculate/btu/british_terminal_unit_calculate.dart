@@ -1,6 +1,8 @@
 import 'package:calculo_ar_condicionado/core/bases/BaseStateful.dart';
+import 'package:calculo_ar_condicionado/core/colors_app.dart';
 import 'package:calculo_ar_condicionado/core/extensions/string_extension.dart';
 import 'package:calculo_ar_condicionado/core/styles_app.dart';
+import 'package:calculo_ar_condicionado/domain/british_terminal_unit.dart';
 import 'package:calculo_ar_condicionado/generated/l10n.dart';
 import 'package:calculo_ar_condicionado/presentation/controllers/british_terninal_unit_store.dart';
 import 'package:calculo_ar_condicionado/presentation/enums/sun_expose_enum.dart';
@@ -28,9 +30,9 @@ class _BritishTerminalUnitCalculateState
     if (_formKey.currentState?.validate() ?? false) {
       _formKey.currentState?.save();
       FocusScope.of(context).unfocus();
-      _bristishTerminalUnitStore
-          .calculate()
-          .then((btu) => {}, onError: (error) => {showError(error)});
+      _bristishTerminalUnitStore.calculate().then(
+          (btu) => {showViewBottomSheet(_showResult(btu))},
+          onError: (error) => {showError(error)});
     }
   }
 
@@ -147,6 +149,71 @@ class _BritishTerminalUnitCalculateState
             ),
           ),
         ));
+  }
+
+  Widget _showResult(BritishTerminalUnit btu) {
+    return Wrap(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(children: [
+            CenterHorizontal(
+                child: Text(LocaleProvider.current.message_result_device,
+                    style: StyleApp.titleSmall)),
+            Center(
+              child: Container(
+                color: Colors.transparent,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text(
+                    btu.calculate.toString() + " BTUs",
+                    style: StyleApp.result,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: RichText(
+                text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: ColorsApp.colorPrimary,
+                    ),
+                    children: [
+                      TextSpan(
+                          text: LocaleProvider.current.can_buy_lower_power,
+                          style: const TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(
+                        text: LocaleProvider
+                            .current.can_buy_lower_power_description,
+                      )
+                    ]),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: RichText(
+                text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: ColorsApp.colorPrimary,
+                    ),
+                    children: [
+                      TextSpan(
+                          text: LocaleProvider.current.can_buy_higher_power,
+                          style: const TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(
+                        text: LocaleProvider
+                            .current.can_buy_higher_power_description,
+                      )
+                    ]),
+              ),
+            ),
+          ]),
+        )
+      ],
+    );
   }
 
   List<Widget> radioExposureSunLevel() {

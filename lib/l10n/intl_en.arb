@@ -29,7 +29,7 @@
   "sun_exposure_level": "Qual o nível de exposição solar do ambiente",
   "directly": "Diretamente",
   "partially": "Parcialmente",
-  "absence_light": "ausência de luz",
+  "absence_light": "Ausência de luz",
   "quantity_others": "Defina a quantidade de pessoas, janelas e equipamentos eletrônicos",
   "example_hours_per_days": "Ex. 8",
   "example_days_per_month": "Ex. 20",
@@ -42,5 +42,10 @@
   "invalid_width_greater_zero": "A largura tem que ser maior que 0 (Zero).",
   "invalid_length": "Comprimento inválido",
   "invalid_length_greater_zero": "O comprimento tem que ser maior que 0 (Zero).",
-  "invalid_sun_exposure": "Informe a exposição solar do ambiente"
+  "invalid_sun_exposure": "Informe a exposição solar do ambiente",
+  "message_result_device": "A potência aproximada para você é:",
+  "can_buy_lower_power": "Posso comprar um de potência menor?\n",
+  "can_buy_lower_power_description": "A utilização de um aparelho de Ar condicionado de potência menor que o recomendado para o ambiente de instalação resultará em pouca eficiência de climatização, diminuição da vida útil e uma maior conta de luz.",
+  "can_buy_higher_power": "Posso comprar um de potência maior?\n",
+  "can_buy_higher_power_description": "A utilização de um aparelho de Ar Condicionado de potência maior que o recomendado para o ambiente de instalação pode não ser prejudicial. Por exemplo: Se você adquirir um aparelho com capacidade maior porém com tecnologia INVERTER, estará adquirindo um produto com uma tecnologia capaz de interpretar e operar eletronicamente com a potência necessária para o ambiente."
 }

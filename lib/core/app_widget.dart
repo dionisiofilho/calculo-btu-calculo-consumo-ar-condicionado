@@ -55,6 +55,7 @@ class _AppWidgetState extends State<AppWidget> {
           filled: true,
           errorMaxLines: 2,
           fillColor: ColorsApp.colorPrimary.withOpacity(0.1)),
+
       colorScheme:
           ColorScheme.fromSwatch().copyWith(secondary: ColorsApp.colorAccent));
 }
