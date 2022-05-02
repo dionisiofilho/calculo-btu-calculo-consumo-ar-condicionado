@@ -27,15 +27,15 @@ mixin _$BristishTerminalUnitStore on _BristishTerminalUnitStore, Store {
   final _$heightAtom = Atom(name: '_BristishTerminalUnitStore.height');
 
   @override
-  int? get height {
+  int? get length {
     _$heightAtom.reportRead();
-    return super.height;
+    return super.length;
   }
 
   @override
-  set height(int? value) {
-    _$heightAtom.reportWrite(value, super.height, () {
-      super.height = value;
+  set length(int? value) {
+    _$heightAtom.reportWrite(value, super.length, () {
+      super.length = value;
     });
   }
 
@@ -43,13 +43,13 @@ mixin _$BristishTerminalUnitStore on _BristishTerminalUnitStore, Store {
       Atom(name: '_BristishTerminalUnitStore.sunExposureLevel');
 
   @override
-  SunExpose? get sunExposureLevel {
+  SunExposure? get sunExposureLevel {
     _$sunExposureLevelAtom.reportRead();
     return super.sunExposureLevel;
   }
 
   @override
-  set sunExposureLevel(SunExpose? value) {
+  set sunExposureLevel(SunExposure? value) {
     _$sunExposureLevelAtom.reportWrite(value, super.sunExposureLevel, () {
       super.sunExposureLevel = value;
     });
@@ -81,7 +81,7 @@ mixin _$BristishTerminalUnitStore on _BristishTerminalUnitStore, Store {
   }
 
   @override
-  dynamic setSunExposure(SunExpose sunExpose) {
+  dynamic setSunExposure(SunExposure sunExpose) {
     final _$actionInfo = _$_BristishTerminalUnitStoreActionController
         .startAction(name: '_BristishTerminalUnitStore.setSunExposure');
     try {
@@ -95,7 +95,7 @@ mixin _$BristishTerminalUnitStore on _BristishTerminalUnitStore, Store {
   String toString() {
     return '''
 width: ${width},
-height: ${height},
+height: ${length},
 sunExposureLevel: ${sunExposureLevel}
     ''';
   }
