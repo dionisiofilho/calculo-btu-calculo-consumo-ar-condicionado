@@ -229,6 +229,11 @@ fabric.properties
 
 ### AndroidStudio Patch ###
 
+# Security
+.local.properties
+.key.properties
+pubspec.lock
+
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/flutter,androidstudio,android

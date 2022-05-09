@@ -1,9 +1,13 @@
 import 'package:calculo_ar_condicionado/core/colors_app.dart';
+import 'package:calculo_ar_condicionado/core/firebase/app_crashlytics.dart';
+import 'package:calculo_ar_condicionado/core/routers/router.dart';
 import 'package:calculo_ar_condicionado/generated/l10n.dart';
-import 'package:calculo_ar_condicionado/presentation/views/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'firebase/app_messaging.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -14,8 +18,18 @@ class AppWidget extends StatefulWidget {
 
 class _AppWidgetState extends State<AppWidget> {
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    _globals();
+    super.initState();
+  }
 
+  void _globals() async {
+    AppCrashlytics.init();
+    await Provider.of<AppMessaging>(context, listen: false).init();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       supportedLocales: LocaleProvider.delegate.supportedLocales,
       localizationsDelegates: const [
@@ -26,12 +40,11 @@ class _AppWidgetState extends State<AppWidget> {
       ],
       restorationScopeId: 'app',
       debugShowCheckedModeBanner: false,
-      title: "Calculo BTU e consumo de energia de ar-condicionado",
+      title: "Cálculo BTU e consumo de energia do ar-condicionado",
       theme: lightTheme,
-      initialRoute: "/",
-      routes: {
-        "/": (context) => const Dashboard(),
-      },
+      initialRoute: Routers.initial,
+      routes: Routers.routers,
+      navigatorKey: Routers.navigatorKey,
     );
   }
 
@@ -55,7 +68,6 @@ class _AppWidgetState extends State<AppWidget> {
           filled: true,
           errorMaxLines: 2,
           fillColor: ColorsApp.colorPrimary.withOpacity(0.1)),
-
       colorScheme:
           ColorScheme.fromSwatch().copyWith(secondary: ColorsApp.colorAccent));
 }
