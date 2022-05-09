@@ -39,6 +39,6 @@ void main() {
   test('btu - calculate', () {
     final BritishTerminalUnit britishTerminalUnit =
         BritishTerminalUnit.init(5, 5, 5, SunExposure.Partially, 5);
-    expect(britishTerminalUnit.calculate, 16800);
+    expect(britishTerminalUnit.calculate, 20400);
   });
 }

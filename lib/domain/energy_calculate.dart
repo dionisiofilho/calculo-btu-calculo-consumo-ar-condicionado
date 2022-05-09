@@ -22,29 +22,29 @@ class EnergyCalculate {
   }
 
   String? validate() {
-    if (isValidDaysPerMonth) {
+    if (!isValidDaysPerMonth) {
       return LocaleProvider.current.invalid_days_per_month;
     }
 
-    if (isValidHoursPerDay) {
+    if (!isValidHoursPerDay) {
       return LocaleProvider.current.invalid_days_hours_per_day;
     }
 
-    if (isValidEnergyValue) {
+    if (!isValidEnergyValue) {
       return LocaleProvider.current.invalid_energy_value;
     }
     return null;
   }
 
   bool get isValidDaysPerMonth {
-    return daysPerMonth != null && (daysPerMonth! > 0 || daysPerMonth! > 31);
+    return daysPerMonth != null && (daysPerMonth! > 0 && daysPerMonth! <= 31);
   }
 
   bool get isValidHoursPerDay {
-    return hoursPerDay != null && (hoursPerDay! > 0 || hoursPerDay! > 24);
+    return hoursPerDay != null && (hoursPerDay! > 0 && hoursPerDay! < 24);
   }
 
   bool get isValidEnergyValue {
-    return energyValue != null && (energyValue == 0.0);
+    return energyValue != null && (energyValue! > 0.0);
   }
 }
