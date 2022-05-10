@@ -231,7 +231,7 @@ fabric.properties
 
 # Security
 .local.properties
-.key.properties
+android/key.properties
 pubspec.lock
 
 !/gradle/wrapper/gradle-wrapper.jar

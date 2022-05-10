@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 
 def flutterMinSdkVersion = localProperties.getProperty('flutter.minSdkVersion')
 if (flutterMinSdkVersion == null) {
-    flutterMinSdkVersion = 21
+    flutterMinSdkVersion = 23
 }
 
 def flutterTargetSdkVersion = localProperties.getProperty('flutter.targetSdkVersion')
@@ -59,7 +59,6 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "br.com.dionisiofilho.calculoarcondicionado"
         minSdkVersion flutterMinSdkVersion
         targetSdkVersion flutterTargetSdkVersion
@@ -67,14 +66,27 @@ android {
         versionName flutterVersionName
     }
 
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
     buildTypes {
-        debug{
+        debug {
             signingConfig signingConfigs.debug
         }
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            buildConfigField "boolean", "ENABLE_DEBUG_CHROME", "false"
+            signingConfig signingConfigs.release
         }
     }
 }

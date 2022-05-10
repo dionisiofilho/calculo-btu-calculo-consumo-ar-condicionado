@@ -1,8 +1,8 @@
 import 'package:calculo_ar_condicionado/core/bases/BaseStateful.dart';
-import 'package:calculo_ar_condicionado/core/colors_app.dart';
+import 'package:calculo_ar_condicionado/resources/colors_app.dart';
 import 'package:calculo_ar_condicionado/core/extensions/string_extension.dart';
 import 'package:calculo_ar_condicionado/core/formatter/money_formatter.dart';
-import 'package:calculo_ar_condicionado/core/styles_app.dart';
+import 'package:calculo_ar_condicionado/resources/styles_app.dart';
 import 'package:calculo_ar_condicionado/domain/energy_calculate.dart';
 import 'package:calculo_ar_condicionado/generated/l10n.dart';
 import 'package:calculo_ar_condicionado/presentation/controllers/energy_calculate_store.dart';

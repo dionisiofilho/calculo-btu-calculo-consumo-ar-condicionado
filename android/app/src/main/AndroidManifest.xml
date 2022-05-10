@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.dionisiofilho.calculoarcondicionado.calculo_ar_condicionado">
    <application
-        android:label="Cálculo BTU e consumo de energia do ar-condicionado"
+        android:label="Cálculo BTU e Consumo de energia do ar-condicionado"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

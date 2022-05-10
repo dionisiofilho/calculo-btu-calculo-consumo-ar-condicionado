@@ -1,4 +1,4 @@
-import 'package:calculo_ar_condicionado/core/colors_app.dart';
+import 'package:calculo_ar_condicionado/resources/colors_app.dart';
 import 'package:flutter/material.dart';
 
 class StyleApp {

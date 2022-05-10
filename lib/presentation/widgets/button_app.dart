@@ -1,4 +1,4 @@
-import 'package:calculo_ar_condicionado/core/styles_app.dart';
+import 'package:calculo_ar_condicionado/resources/styles_app.dart';
 import 'package:flutter/material.dart';
 
 class ButtonApp extends StatefulWidget {

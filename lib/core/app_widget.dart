@@ -1,4 +1,4 @@
-import 'package:calculo_ar_condicionado/core/colors_app.dart';
+import 'package:calculo_ar_condicionado/resources/colors_app.dart';
 import 'package:calculo_ar_condicionado/core/firebase/app_crashlytics.dart';
 import 'package:calculo_ar_condicionado/core/routers/router.dart';
 import 'package:calculo_ar_condicionado/generated/l10n.dart';

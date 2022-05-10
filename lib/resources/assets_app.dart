@@ -1,5 +1,5 @@
 class AssetsApp{
   AssetsApp._();
 
-  static String exampleProcel = "images/exemplo/exemplo_procel.png";
+  static String exampleProcel = "assets/example/exemplo_procel.png";
 }
