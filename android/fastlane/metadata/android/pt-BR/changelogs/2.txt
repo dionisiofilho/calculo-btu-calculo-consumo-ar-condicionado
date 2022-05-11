@@ -1,0 +1,2 @@
+- Calcular BTU
+- Calcular Consumo de energia de um aparelho ar-condicionado

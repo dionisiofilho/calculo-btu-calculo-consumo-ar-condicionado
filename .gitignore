@@ -232,6 +232,7 @@ fabric.properties
 # Security
 .local.properties
 android/key.properties
+android/fastlane/json_key.json
 pubspec.lock
 
 !/gradle/wrapper/gradle-wrapper.jar

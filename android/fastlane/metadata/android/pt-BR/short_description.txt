@@ -1,0 +1,1 @@
+Calculadora de Consumo de energia de um aparelho de Ar-Condicionado e BTU

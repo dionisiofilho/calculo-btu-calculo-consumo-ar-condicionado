@@ -1,0 +1,9 @@
+Calculadora de Consumo médio de energia de um aparelho de Ar-Condicionado.
+
+Calculadora de Unidade Térmica Britânica (BTU). Com a potência recomendada seu aparelho pode ter:
+
+- Maior rapidez de resfriamento;
+- Mais conforto para os ambientes;
+- Potência maior ao lançar o ar no ambiente;
+- Maior alcance do ar nos espaços;
+- Uma melhor experiência com seu produto.

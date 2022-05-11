@@ -1,0 +1,105 @@
+
+default_platform(:android)
+
+platform :android do
+
+  desc "Deploy Google Play [Interno]"
+    lane :deploy_interno do
+
+      versionCode = android_get_version_code(
+        gradle_file: "app/build.gradle"
+      )
+
+      versionName = android_get_version_name(
+        gradle_file: "app/build.gradle"
+      )
+
+      # puts "**** Sucesso no incremento do código de versão ****"
+
+      gradle(
+        task: 'assemble',
+        build_type: 'Release',
+      )
+
+      # puts "**** Sucesso build do projeto ****"
+
+        upload_to_play_store(
+          track: 'internal',
+          rollout: '1', #0.1 = 10%
+          skip_upload_metadata: true,
+          skip_upload_changelogs: true,
+          skip_upload_images: true,
+          skip_upload_screenshots: true,
+          aab: '../build/app/outputs/bundle/release/app-release.aab'
+        )
+
+      # puts "**** Sucesso upload apk para a google play ****"
+    end
+
+    desc "Deploy Google Play [Beta]"
+        lane :deploy_beta do
+
+          versionCode = android_get_version_code(
+            gradle_file: "app/build.gradle"
+          )
+
+          versionName = android_get_version_name(
+            gradle_file: "app/build.gradle"
+          )
+
+          # puts "**** Sucesso no incremento do código de versão ****"
+
+          gradle(
+            task: 'assemble',
+            build_type: 'Release',
+          )
+
+          # puts "**** Sucesso build do projeto ****"
+
+          upload_to_play_store(
+            track: 'beta',
+            rollout: '1', #0.1 = 10%
+            skip_upload_metadata: true,
+            skip_upload_changelogs: true,
+            skip_upload_images: true,
+            skip_upload_screenshots: true,
+            aab: '../build/app/outputs/bundle/release/app-release.aab'
+          )
+
+          # puts "**** Sucesso upload apk para a google play ****"
+        end
+
+        desc "Deploy Google Play"
+            lane :deploy_production do
+
+              versionCode = android_get_version_code(
+                gradle_file: "app/build.gradle"
+              )
+
+              versionName = android_get_version_name(
+                gradle_file: "app/build.gradle"
+              )
+
+              # puts "**** Sucesso no incremento do código de versão ****"
+
+              gradle(
+                task: 'assemble',
+                build_type: 'Release',
+              )
+
+              # puts "**** Sucesso build do projeto ****"
+
+              upload_to_play_store(
+                track: 'production',
+                rollout: '0.1', #0.1 = 10%
+                skip_upload_metadata: true,
+                skip_upload_changelogs: true,
+                skip_upload_images: true,
+                skip_upload_screenshots: true,
+                aab: '../build/app/outputs/bundle/release/app-release.aab'
+              )
+
+              # puts "**** Sucesso upload apk para a google play ****"
+            end
+
+end
