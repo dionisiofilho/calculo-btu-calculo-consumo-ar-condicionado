@@ -9,17 +9,17 @@ class BristishTerminalUnitStore = _BristishTerminalUnitStore
     with _$BristishTerminalUnitStore;
 
 abstract class _BristishTerminalUnitStore with Store {
-  int? width;
-  int? length;
+  double? width;
+  double? length;
   int? amountPeople;
   int? amountEquipment;
   SunExposure? sunExposureLevel;
 
-  void setWidth(int width) {
+  void setWidth(double? width) {
     this.width = width;
   }
 
-  void setHeight(int length) {
+  void setHeight(double? length) {
     this.length = length;
   }
 

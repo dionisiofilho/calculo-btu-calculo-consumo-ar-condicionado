@@ -2,8 +2,8 @@ import 'package:calculo_ar_condicionado/generated/l10n.dart';
 import 'package:calculo_ar_condicionado/presentation/enums/sun_expose_enum.dart';
 
 class BritishTerminalUnit {
-  int? width;
-  int? length;
+  double? width;
+  double? length;
   int? amountPeoples;
   int? amountEquipment;
   SunExposure? sunExposureLevel;
@@ -51,8 +51,8 @@ class BritishTerminalUnit {
       }
     }
 
-    int? area = width! * length!;
-    btus = (area * paramExposure);
+    double? area = width! * length!;
+    btus = (area.toInt() * paramExposure);
 
     if (amountPeoples != null && amountPeoples! > 1) {
       int valuePeoples = (amountPeoples! - 1) * paramExposure;

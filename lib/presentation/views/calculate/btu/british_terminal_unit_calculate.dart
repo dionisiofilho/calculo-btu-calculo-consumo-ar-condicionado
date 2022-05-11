@@ -69,7 +69,7 @@ class _BritishTerminalUnitCalculateState
                       return value.validateEmpty();
                     },
                     onSaved: (value) => {
-                      _bristishTerminalUnitStore.setWidth(int.parse(value!))
+                      _bristishTerminalUnitStore.setWidth(double.parse(value))
                     },
                     keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.next,
@@ -88,7 +88,7 @@ class _BritishTerminalUnitCalculateState
                       return value.validateEmpty();
                     },
                     onSaved: (value) => {
-                      _bristishTerminalUnitStore.setHeight(int.parse(value!))
+                      _bristishTerminalUnitStore.setHeight(double.parse(value))
                     },
                     keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.next,

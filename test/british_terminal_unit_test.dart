@@ -41,4 +41,10 @@ void main() {
         BritishTerminalUnit.init(5, 5, 5, SunExposure.Partially, 5);
     expect(britishTerminalUnit.calculate, 20400);
   });
+
+  test('btu - calculate broken area', () {
+    final BritishTerminalUnit britishTerminalUnit =
+    BritishTerminalUnit.init(5.2, 5.2, 5, SunExposure.Partially, 5);
+    expect(britishTerminalUnit.calculate, 21600);
+  });
 }
