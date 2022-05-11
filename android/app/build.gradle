@@ -52,7 +52,7 @@ android {
         applicationId "br.com.dionisiofilho.calculoarcondicionado"
         minSdkVersion flutterMinSdkVersion
         targetSdkVersion flutterTargetSdkVersion
-        versionCode 6
+        versionCode 4
         versionName '1.0.1'
     }
 
