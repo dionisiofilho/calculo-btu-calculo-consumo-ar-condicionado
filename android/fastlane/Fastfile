@@ -6,6 +6,10 @@ platform :android do
   desc "Deploy Google Play [Interno]"
     lane :deploy_interno do
 
+      android_set_version_code(
+          gradle_file: "app/build.gradle"
+      )
+
       versionCode = android_get_version_code(
         gradle_file: "app/build.gradle"
       )
@@ -39,6 +43,10 @@ platform :android do
     desc "Deploy Google Play [Beta]"
         lane :deploy_beta do
 
+         android_set_version_code(
+            gradle_file: "app/build.gradle"
+         )
+
           versionCode = android_get_version_code(
             gradle_file: "app/build.gradle"
           )
@@ -71,6 +79,10 @@ platform :android do
 
         desc "Deploy Google Play"
             lane :deploy_production do
+
+            android_set_version_code(
+                gradle_file: "app/build.gradle"
+            )
 
               versionCode = android_get_version_code(
                 gradle_file: "app/build.gradle"
