@@ -26,7 +26,18 @@ extension StringExtension on String? {
     return (int.parse(v) / 100);
   }
 
-  String or({String orValue = ""}){
+  String or({String orValue = ""}) {
     return orValue;
+  }
+
+  String? changeCommaToDot() {
+    if (isNullOrEmpty()) {
+      return null;
+    }
+
+    if (this!.contains(",")) {
+      return this!.replaceAll(",", ".");
+    }
+    return this;
   }
 }

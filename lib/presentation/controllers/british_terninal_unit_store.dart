@@ -13,6 +13,8 @@ abstract class _BristishTerminalUnitStore with Store {
   double? length;
   int? amountPeople;
   int? amountEquipment;
+
+  @observable
   SunExposure? sunExposureLevel;
 
   void setWidth(double? width) {
@@ -23,6 +25,7 @@ abstract class _BristishTerminalUnitStore with Store {
     this.length = length;
   }
 
+  @action
   setSunExposure(SunExposure exposure) {
     sunExposureLevel = exposure;
   }

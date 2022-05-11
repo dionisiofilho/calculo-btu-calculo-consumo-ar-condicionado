@@ -26,8 +26,7 @@ abstract class _EnergyCalculateStore with Store {
 
   void setDevicePowerConsumption(String? value) {
     if (!value.isNullOrEmpty()) {
-      String? newValue = value?.replaceAll(",", ".");
-      devicePowerConsumption = double.parse(newValue!);
+      devicePowerConsumption = double.parse(value!.changeCommaToDot()!);
     }
   }
 

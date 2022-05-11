@@ -1,5 +1,25 @@
-# Launch Screen Assets
+# Calculadora de Consumo e BTU
 
-You can customize the launch screen with your own desired assets by replacing the image files in this directory.
+## Recursos
+- Calculadora British Thermal Unit (BTU), na tradução livre: Unidade Térmica Britânica.
+- Calculadora da média do consumo de energia de um aparelho de Ar-Condicionado.
 
-You can also do it by opening your Flutter project's Xcode project with `open ios/Runner.xcworkspace`, selecting `Runner/Assets.xcassets` in the Project Navigator and dropping in the desired images.
+## Tecnologias
+- Flutter
+- Firebase (Crashlytics, Cloud Messaging)
+
+
+## Requisitos
+- Flutter intalado
+- Android Studio ou Visual Studio Code (Com os plugins instalados)
+
+## Instalação
+
+```sh
+flutter pub get
+flutter packages pub run build_runner build #(Para gerar os *g.dart)
+```
+## Imagens
+
+## Licença
+FREE
